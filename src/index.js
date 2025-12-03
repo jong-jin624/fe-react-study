@@ -5,13 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import TempApp from './TempApp';
 import Basic01 from './components/Basic01';
+import State01 from './components/State01';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <TempApp /> */}
-    <Basic01 />
+    {/* <Basic01 /> */}
+    <State01 />
   </React.StrictMode>
 );
 
