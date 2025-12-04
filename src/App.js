@@ -6,6 +6,7 @@ import State02 from './components/State02';
 import Export01 from './components/Export01';
 import State03 from './components/State03';
 import Props01 from './components/Props01';
+import Props02 from './components/Props02';
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
   // return <State02 />;
   // return <Export01 />;
   // return <State03 />;
-  return <Props01 />;
+  // return <Props01 />;
+  return <Props02 />;
 
   // return (
   //   <div className="App">
