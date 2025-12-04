@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function State02() {
 
-    let msgArr = ["안녕", "안녕", "안녕", "안녕"];
+    let msgArr = ["안녕", "안녕2", "안녕3", "안녕4"];
 
     let numArr = [1, 1, 1, 1];
 
