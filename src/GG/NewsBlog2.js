@@ -14,6 +14,8 @@ function NewsBlog2() {
 
     let [modalFlag, setModalFlag] = useState(false);
     let [selectedIdx, setSelectedIdx] = useState(0);
+    let [selectedTitle, setSelectedTitle] = useState('');
+    let [selectedLikeCount, setSelectedLikeCount] = useState(0);
 
     return (
         <div>
@@ -29,8 +31,9 @@ function NewsBlog2() {
                             <h4 onClick={() => {
                                 setModalFlag(!modalFlag);
                                 setSelectedIdx(index);
+                                setSelectedTitle(item);
                             }}>
-                                {item}
+                                {news[index]}
                                 <span onClick={(event) => {
                                     event.stopPropagation();
 
@@ -46,8 +49,16 @@ function NewsBlog2() {
                 })
             }
 
+            <button onClick={() => {
+                let temp = [...news];
+                temp[0] = 'Today News';
+                setNews(temp);
+            }}>첫글 제목 변경</button>
+
+
             {
-                modalFlag && <Modal title={news[selectedIdx]} />
+                modalFlag && <Modal news={news} setNews={setNews} />
+
             }
 
         </div>

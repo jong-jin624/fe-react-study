@@ -22,8 +22,9 @@ function App() {
   // return <Props01 />;
   // return <Props02 />;
   // return <NewsBlog />;
-  return <NewsBlog_review />;
-  // return <NewsBlog2 />;
+  // return <NewsBlog_review />;
+  return <NewsBlog2 />;
+
   // return (
   //   <div className="App">
   //     <header className="App-header">

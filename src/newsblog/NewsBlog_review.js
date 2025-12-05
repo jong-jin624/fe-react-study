@@ -70,6 +70,16 @@ function NewsBlog_review() {
             {
                 // modalFlag == true ? <Modal /> : null
             }
+
+            <button onClick={()=> {
+                let temp = [...news];
+                temp[0] = 'Today News';
+                setNews(temp);
+            }}>첫글 제목 변경</button>
+
+            
+            
+
             {
                 modalFlag && <Modal />
             }
