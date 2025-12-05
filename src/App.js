@@ -8,6 +8,8 @@ import State03 from './components/State03';
 import Props01 from './components/Props01';
 import Props02 from './components/Props02';
 import NewsBlog from './newsblog/NewsBlog';
+import NewsBlog2 from './GG/NewsBlog2';
+import NewsBlog_review from './newsblog/NewsBlog_review';
 
 
 function App() {
@@ -19,8 +21,9 @@ function App() {
   // return <State03 />;
   // return <Props01 />;
   // return <Props02 />;
-  return <NewsBlog />;
-
+  // return <NewsBlog />;
+  return <NewsBlog_review />;
+  // return <NewsBlog2 />;
   // return (
   //   <div className="App">
   //     <header className="App-header">
