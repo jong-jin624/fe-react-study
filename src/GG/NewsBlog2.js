@@ -16,6 +16,7 @@ function NewsBlog2() {
     let [selectedIdx, setSelectedIdx] = useState(0);
     let [selectedTitle, setSelectedTitle] = useState('');
     let [selectedLikeCount, setSelectedLikeCount] = useState(0);
+    let [inputText, setInputText] = useState('');
 
     return (
         <div>
@@ -55,9 +56,29 @@ function NewsBlog2() {
                 setNews(temp);
             }}>첫글 제목 변경</button>
 
+            <div>
+                <input type='text' id='input_news_title' value={inputText} onChange={(event) =>{
+                console.log(event.target.value);
+                setInputText(event.target.value);
+                }}/>
+                <button onClick={() => {
+
+                    let temp = [...news];
+                    temp.push(inputText);
+                    setNews(temp);
+
+                    setInputText('');
+                    // let title = document.getElementById('input_news_title').value;
+
+                    // let temp = [...news];
+                    // temp.push(title);
+                    // setNews(temp);
+                }}>발행</button>
+            </div>
 
             {
-                modalFlag && <Modal news={news} setNews={setNews} />
+                modalFlag && <Modal news={news} setNews={setNews} bgColor={'lightblue'}
+                    title={selectedTitle} likeCount={selectedLikeCount} />
 
             }
 
